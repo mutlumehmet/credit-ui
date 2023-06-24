@@ -31,6 +31,37 @@ export default function MainLayout() {
     handleDataFetch();
   }, []);
 
+  // there is no built-in way to disable sorting on third click, here logic manually applied
+  const handleThirdClickOnSort = (e: CellPreparedEvent<any, any>) => {
+    if (e.rowType === "header") {
+      e.cellElement.addEventListener("click", function (event) {
+        if (!e.column.sortOrder) {
+          e.component.columnOption(e.columnIndex, "sortOrder", "asc");
+        } else if (e.column.sortOrder === "asc") {
+          e.component.columnOption(e.columnIndex, "sortOrder", "desc");
+        } else if (e.column.sortOrder === "desc") {
+          e.component.columnOption(e.columnIndex, "sortOrder", undefined);
+        }
+        event.stopPropagation();
+      });
+    }
+  };
+
+  // here I apply filtering only on specific columns as requested
+  const handleColumnSettings = (columns: Column[]) => {
+    for (let i = 0; i < columns.length; i++) {
+      if (
+        columns[i].name === "companyName" ||
+        columns[i].name === "lastReportingDate" ||
+        columns[i].name === "nextReportingDate"
+      ) {
+        columns[i].allowFiltering = true;
+      } else {
+        columns[i].allowFiltering = false;
+      }
+    }
+  };
+
   return (
     <div className="flex flex-col justify-center items-center mt-14 px-20">
       <DataGrid
@@ -42,6 +73,8 @@ export default function MainLayout() {
         columnResizingMode={"widget"}
         allowColumnReordering={true}
         rowAlternationEnabled={true}
+        onCellPrepared={handleThirdClickOnSort}
+        customizeColumns={(columns) => handleColumnSettings(columns)}
       >
         <Paging enabled={false} />
         <Toolbar>
