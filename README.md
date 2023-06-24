@@ -1,46 +1,32 @@
-# Getting Started with Create React App
+# Credit UI App
+Built with [DevExpress](https://js.devexpress.com/), [Tailwind](https://tailwindcss.com/),  [Create React App](https://github.com/facebook/create-react-app).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## How to run
 
-## Available Scripts
+`git clone https://github.com/mutlumehmet/credit-ui.git`
 
-In the project directory, you can run:
+`cd credit-ui`
 
-### `npm start`
+`npm install`
+
+`npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Features
 
-### `npm test`
+## Refresh datagrid
+![01-refresh](https://github.com/mutlumehmet/credit-ui/assets/90329858/8207b186-e196-4b7c-ac12-93d2420872dd)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Datagrid search
+![02-search](https://github.com/mutlumehmet/credit-ui/assets/90329858/2ed3484e-03b6-4099-b674-f4fc4889ed99)
 
-### `npm run build`
+## Column sort in 3 stages
+![03-three-stage-sorting](https://github.com/mutlumehmet/credit-ui/assets/90329858/2dd0f4c9-ebb9-4dcf-84fb-27a91ff37224)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Column specific search
+![04-column-search](https://github.com/mutlumehmet/credit-ui/assets/90329858/7e2beb6c-9ede-48b6-9691-6b287ca01b9a)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Scroll
+![05-scroll](https://github.com/mutlumehmet/credit-ui/assets/90329858/125a283e-9082-480a-90c9-07bcedf17cff)
